@@ -1,0 +1,242 @@
+import org.drools.core.process.core.datatype.impl.type.StringDataType;
+import org.drools.core.process.core.datatype.impl.type.ObjectDataType;
+import org.drools.core.process.core.datatype.impl.type.BooleanDataType;
+import org.drools.core.process.core.datatype.impl.type.IntegerDataType;
+[
+  [
+    "name" : "Email",
+    "parameters" : [
+      "From" : new StringDataType(),
+      "To" : new StringDataType(),
+      "Subject" : new StringDataType(),
+      "Body" : new StringDataType()
+    ],
+    "displayName" : "Email",
+    "icon" : "defaultemailicon.gif"
+  ],
+
+  [
+    "name" : "Log",
+    "parameters" : [
+      "Message" : new StringDataType()
+    ],
+    "displayName" : "Log",
+    "icon" : "defaultlogicon.gif"
+  ],
+
+  [
+    "name" : "WebService",
+    "parameters" : [
+        "Url" : new StringDataType(),
+         "Namespace" : new StringDataType(),
+         "Interface" : new StringDataType(),
+         "Operation" : new StringDataType(),
+         "Parameter" : new StringDataType(),
+         "Endpoint" : new StringDataType(),
+         "Mode" : new StringDataType()
+    ],
+    "results" : [
+        "Result" : new ObjectDataType(),
+    ],
+    "displayName" : "WS",
+    "icon" : "defaultservicenodeicon.png"
+  ],
+
+  [
+    "name" : "Rest",
+    "parameters" : [
+        "Url" : new StringDataType(),
+        "Method" : new StringDataType(),
+        "ConnectTimeout" : new StringDataType(),
+        "ReadTimeout" : new StringDataType(),
+        "Username" : new StringDataType(),
+        "Password" : new StringDataType()
+    ],
+    "results" : [
+        "Result" : new ObjectDataType(),
+    ],
+    "displayName" : "REST",
+    "icon" : "defaultservicenodeicon.png"
+  ],
+  [
+    "name" : "add-Faf-post",
+    "parameters" : [
+        "shortPhoneNumber" : new StringDataType(),
+        "subscriberFriend" : new ObjectDataType()
+       
+    ],
+    "results" : [
+        "Result" : new IntegerDataType(),
+        "success" : new BooleanDataType(),
+        "error" : new StringDataType()
+    ],
+    "displayName" : "add faf post",
+    "icon" : "defaultservicenodeicon.png"
+  ],
+  [
+    "name" : "add-Faf-pre",
+    "parameters" : [
+        "shortPhoneNumber" : new StringDataType(),
+        "subscriberFriend" : new ObjectDataType(),
+        "FaFindicator"  : new IntegerDataType()
+       
+    ],
+    "results" : [
+        "Result" : new IntegerDataType(),
+        "success" : new BooleanDataType(),
+        "error" : new StringDataType(),
+    ],
+    "displayName" : "add faf pre",
+    "icon" : "defaultservicenodeicon.png"
+  ],
+    [
+    "name" : "add-Faf-hyb",
+    "parameters" : [
+        "shortPhoneNumber" : new StringDataType(),
+        "subscriberFriend" : new ObjectDataType(),
+        "FaFindicator"  : new IntegerDataType()
+       
+    ],
+    "results" : [
+        "Result" : new IntegerDataType(),
+        "success" : new BooleanDataType(),
+        "error" : new StringDataType()
+    ],
+    "displayName" : "add faf hyb",
+    "icon" : "defaultservicenodeicon.png"
+  ],
+  [
+    "name" : "modify-Faf-post",
+    "parameters" : [
+        "shortPhoneNumber" : new StringDataType(),
+        "subscriberFriend" : new ObjectDataType(),
+        "subscriberFriendCurrent" : new StringDataType() 
+       
+    ],
+    "results" : [
+        "Result" : new BooleanDataType(),
+        "success" : new BooleanDataType(),
+        "error" : new StringDataType(),
+    ],
+    "displayName" : "modify faf post",
+    "icon" : "defaultservicenodeicon.png"
+  ],
+   [
+    "name" : "modify-Faf-pre",
+    "parameters" : [
+        "shortPhoneNumber" : new StringDataType(),
+        "subscriberFriend" : new ObjectDataType(),
+        "subscriberFriendCurrent" : new StringDataType() ,
+        "FaFindicator"  : new IntegerDataType()
+       
+    ],
+    "results" : [
+        "Result" : new IntegerDataType(),
+        "success" : new BooleanDataType(),
+        "error" : new StringDataType(),
+    ],
+    "displayName" : "modify faf pre",
+    "icon" : "defaultservicenodeicon.png"
+  ],
+  [
+    "name" : "modify-Faf-hyb",
+    "parameters" : [
+        "shortPhoneNumber" : new StringDataType(),
+        "subscriberFriend" : new ObjectDataType(),
+        "subscriberFriendCurrent" : new StringDataType() ,
+        "FaFindicator"  : new IntegerDataType()
+       
+    ],
+    "results" : [
+        "Result" : new IntegerDataType(),
+        "success" : new BooleanDataType(),
+        "error" : new StringDataType()
+    ],
+    "displayName" : "modify faf hyb",
+    "icon" : "defaultservicenodeicon.png"
+  ],
+  [
+    "name" : "delete-Faf-post",
+    "parameters" : [
+        "shortPhoneNumber" : new StringDataType(),
+        "subscriberFriend" : new ObjectDataType()
+       
+    ],
+    "results" : [
+        "Result" : new IntegerDataType(),
+        "success" : new BooleanDataType(),
+        "error" : new StringDataType()
+    ],
+    "displayName" : "delete faf post",
+    "icon" : "defaultservicenodeicon.png"
+  ],
+  [
+    "name" : "delete-Faf-pre",
+    "parameters" : [
+        "shortPhoneNumber" : new StringDataType(),
+        "subscriberFriend" : new ObjectDataType(),
+        "FaFindicator"  : new IntegerDataType()
+       
+    ],
+    "results" : [
+        "Result" : new IntegerDataType(),
+        "success" : new BooleanDataType(),
+        "error" : new StringDataType(),
+    ],
+    "displayName" : "delete faf pre",
+    "icon" : "defaultservicenodeicon.png"
+  ],
+  [
+    "name" : "delete-Faf-hyb",
+    "parameters" : [
+        "shortPhoneNumber" : new StringDataType(),
+        "subscriberFriend" : new ObjectDataType(),
+        "FaFindicator"  : new IntegerDataType()
+       
+    ],
+    "results" : [
+        "Result" : new IntegerDataType(),
+        "success" : new BooleanDataType(),
+        "error" : new StringDataType(),
+    ],
+    "displayName" : "delete faf hyb",
+    "icon" : "defaultservicenodeicon.png"
+  ],
+  [
+    "name" : "percist-Hist-FaF",
+    "parameters" : [
+        "coid" : new IntegerDataType(),
+        "custid" : new IntegerDataType(),
+        "subscriberFriend" : new ObjectDataType(),
+        "user":new StringDataType(),
+        "operation":new StringDataType()
+       
+    ],
+    "results" : [
+        "Result" : new BooleanDataType(),
+        "success" : new BooleanDataType(),
+        "error" : new StringDataType(),
+    ],
+    "displayName" : "percist Hist FaF",
+    "icon" : "defaultservicenodeicon.png"
+  ],
+  [
+    "name" : "update-Hist-FaF",
+    "parameters" : [
+        "coid" : new IntegerDataType(),
+        "custid" : new IntegerDataType(),
+        "fafCode":new IntegerDataType(),
+        "status" : new IntegerDataType(),
+        "FaFindicator":new IntegerDataType()
+       
+    ],
+    "results" : [
+        "Result" : new BooleanDataType(),
+        "success" : new BooleanDataType(),
+        "error" : new StringDataType()
+    ],
+    "displayName" : "update Hist FaF",
+    "icon" : "defaultservicenodeicon.png"
+  ]
+
+]
